@@ -11,7 +11,6 @@ class CompositionListener(JavaParserLabeledListener):
     def __init__(self, class_name):
         self.__class_name = class_name
 
-
     def enterClassDeclaration(self, ctx: JavaParserLabeled.ClassDeclarationContext, ):
         print(ctx.IDENTIFIER())
         self.class_name_list.append(str(ctx.IDENTIFIER()))
